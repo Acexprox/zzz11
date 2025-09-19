@@ -175,23 +175,15 @@ const MetricCard = ({ item, idx, visible }) => {
  animate={cardCtrl}
  className={[
  'group rounded-2xl border bg-white/80 backdrop-blur px-2 py-3 sm:px-3 sm:py-4 text-center relative',
+ 'trust-metric-card',
  'hover:scale-[1.03] hover:border-yellow-300/60',
  'transition-all duration-300 ease-out',
  'will-change-transform will-change-opacity will-change-shadow',
  'before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
  ].join(' ')}
- style={{
- boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
- overflow: 'hidden',
- }}
- onMouseEnter={(e) => {
- e.target.style.boxShadow = '0 10px 15px -3px rgba(214, 182, 97, 0.2), 0 4px 6px -2px rgba(214, 182, 97, 0.1)';
- }}
- onMouseLeave={(e) => {
- e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
- }}
  role="figure"
  aria-label={`${item.label}: ${item.value}`}
+ style={{ overflow: 'hidden' }}
  >
  <motion.div
  initial={allowMotion ? { scale: 0 } : { scale: 1 }}
