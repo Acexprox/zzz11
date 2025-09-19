@@ -198,7 +198,7 @@ const MetricCard = ({ item, idx, visible }) => {
  variants={numberVariants}
  initial="initial"
  animate={readyToCount && allowMotion ? 'counting' : 'initial'}
- className="text-[0.8rem] sm:text-lg font-extrabold text-gray-900 leading-none truncate"
+ className="trust-metric-number text-[0.8rem] sm:text-lg font-extrabold text-gray-900 leading-none truncate"
  dir="ltr"
  >
  {countText}
