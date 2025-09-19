@@ -191,7 +191,6 @@ const MetricCard = ({ item, idx, visible }) => {
  }}
  role="figure"
  aria-label={`${item.label}: ${item.value}`}
- style={{ overflow: 'hidden' }}
  >
  <motion.div
  initial={allowMotion ? { scale: 0 } : { scale: 1 }}
