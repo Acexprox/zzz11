@@ -174,9 +174,12 @@ const MetricCard = ({ item, idx, visible }) => {
  initial={allowMotion ? { opacity: 0, y: 16, scale: 0.96 } : { opacity: 1, y: 0, scale: 1 }}
  animate={cardCtrl}
  className={[
- 'group rounded-2xl border bg-white/70 backdrop-blur px-2 py-3 sm:px-3 sm:py-4 text-center',
- 'hover:scale-[1.02] hover:shadow-[0_10px_28px_rgba(214,182,97,0.25)] hover:border-yellow-300/60',
- 'will-change-transform will-change-opacity',
+ 'group rounded-2xl border bg-white/80 backdrop-blur px-2 py-3 sm:px-3 sm:py-4 text-center relative',
+ 'shadow-[0_4px_14px_0_rgba(0,0,0,0.08),0_1px_3px_0_rgba(0,0,0,0.05)] hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.12),0_4px_6px_-2px_rgba(0,0,0,0.06)]',
+ 'hover:scale-[1.03] hover:shadow-[0_12px_35px_rgba(214,182,97,0.35),0_4px_14px_rgba(214,182,97,0.15)] hover:border-yellow-300/60',
+ 'transition-all duration-300 ease-out',
+ 'will-change-transform will-change-opacity will-change-shadow',
+ 'before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
  ].join(' ')}
  role="figure"
  aria-label={`${item.label}: ${item.value}`}
